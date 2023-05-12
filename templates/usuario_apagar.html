@@ -1,0 +1,20 @@
+{# usuario_apagar.html #}
+{% include "inc/head.html" %}
+
+<h1>Apagar usuário</h1>
+
+<p>Tem certeza de que quer fazer isso?</p>
+<p>Nunca mais será possível recuperar este usuário 😮</p>
+
+<p><strong>Você está prestes a apagar o coitado do {{ usuario.nome }}</strong></p>
+
+<form action="#" method="post">
+    <input type="hidden" name="id" value="{{ usuario.id }}">
+    <button>
+    <img src="https://imageproxy.ifunny.co/crop:x-20,resize:640x,quality:90x75/images/be0df388257ad5b365095f9f9d0d58476af1332e7bc60ea2cfc914dcdca0d22a_1.jpg" alt="">
+    </button>
+</form>
+
+<div><a href="usuarios.php">Cancelar</a></div>
+
+{% include "inc/foot.html" %}

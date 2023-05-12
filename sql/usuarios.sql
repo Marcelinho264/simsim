@@ -1,0 +1,7 @@
+CREATE TABLE usuarios(
+	id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(250) NOT NULL,
+    email VARCHAR(250) NOT NULL,
+    senha varchar(250) NOT NULL,
+    PRIMARY KEY(id)
+)

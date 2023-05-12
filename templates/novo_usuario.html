@@ -1,0 +1,43 @@
+{% include "inc/head.html" %}
+
+
+<head>
+    <link rel="stylesheet" href="style/style.css">
+    <title>Desenvolvimento</title>
+</head>
+
+<body>
+    <section>
+        <div class="form-box">
+                    <div class="image">
+                    <img src="sim.png" alt="">
+                    </div>
+            <div class="form-value">
+                <form action="novo_usuario_gravar.php" method="POST">
+                    <h2>Login</h2>
+                     <div class="inputbox">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input type="text" name="nome" required>
+                        <label for="">Nome</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="e-mail" name="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="pass" required>
+                        <label for="">Senha</label>
+                    </div>
+                    
+                    <button>Logar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+{% include "inc/foot.html" %}

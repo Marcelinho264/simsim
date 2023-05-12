@@ -1,0 +1,38 @@
+{% include "inc/head.html" %}
+
+    <p style="text-align: center; font-size: 2em;">Listagem de usuários</p>
+
+        <table  class="table table-bordered" border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Ação</th>
+        </tr>
+
+        {% for usr in usuarios %}
+        <!-- Linha para repetir -->
+        <tr>
+            <td>{{usr.id}}</td>
+            <td>{{usr.nome}}</td>
+            <td>{{usr.email}}</td>
+            <td><a style="font-size: 1.3em;" href="usuario_apagar.php?id={{usr.id}}"><ion-icon name="trash-outline"></ion-icon></a>
+            <a style="font-size: 1.3em;" href="usuario_ver.php?id={{usr.id}}"><ion-icon name="create-outline"></ion-icon></a>
+            </td>
+        </tr>
+        <!-- / Linha para repetir -->
+        {% else %}
+        <tr>
+            <td colspan="2">Nenhum usuário</td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+
+     <div class="container">
+        <div class="col-md-12 text-center btn btn-primary ">  
+            <a class="text-white" href="novo_usuario.php">Adicionar usuário</a>
+        </div>
+    </div>
+
+{% include "inc/foot.html" %}
