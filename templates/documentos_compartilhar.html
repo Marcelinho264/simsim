@@ -1,0 +1,23 @@
+{% include "inc/head.html" %}
+
+    <form method='POST' enctype='multipart/form-data'>;
+    <label>Selecione um documento:</label>";
+    <select name='id_arquivo'>";
+    foreach ($documentos as $documento) {
+      <option value='" . $documento['id_arquivo'] . "'>" . $documento['arquivo'] . </option>
+    }
+    </select>"
+    <br><br>"
+    <label>Selecione um usuário:</label>"
+    <select name='nome' >"
+    foreach ($usuarios as $usuario) {
+      if ($usuario['id_usuario'] != $idUsuario) {
+            <option value='" . $usuario['id_usuario'] . "'>" . $usuario['nome'] . </option>
+      }
+    }
+    </select>"
+    <br><br>"
+    <input type='submit' value='Compartilhar'>"
+    </form>"
+
+{% include "inc/foot.html" %}

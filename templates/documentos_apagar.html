@@ -1,0 +1,17 @@
+{% include "inc/head.html" %}
+
+<h1>Apagar Documento</h1>
+
+<p>Tem certeza de que quer fazer isso?</p>
+<p>Nunca mais será possível recuperar este arquivo</p>
+
+<p><strong>Você está prestes a apagar o arquivo {{ arquivo.arquivo }} PERMANENTEMENTE</strong></p>
+
+<form action="#" method="post">
+    <input type="hidden" name="id" value="{{ arquivo.id }}">
+    <button style="background-color: antiquewhite; border: solid 1px black;">Apagar Usuário mesmo assim!</button>
+</form>
+
+<div><a href="documentos_filtrar.php">Cancelar</a></div>
+
+{% include "inc/foot.html" %}

@@ -2,32 +2,33 @@
 
     <p style="text-align: center; font-size: 2em;">Listagem de usuários</p>
 
-        <table  class="table table-bordered" border="1">
-        <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Ação</th>
-        </tr>
-
-        {% for usr in usuarios %}
-        <!-- Linha para repetir -->
-        <tr>
-            <td>{{usr.id}}</td>
-            <td>{{usr.nome}}</td>
-            <td>{{usr.email}}</td>
-            <td><a style="font-size: 1.3em;" href="usuario_apagar.php?id={{usr.id}}"><ion-icon name="trash-outline"></ion-icon></a>
-            <a style="font-size: 1.3em;" href="usuario_ver.php?id={{usr.id}}"><ion-icon name="create-outline"></ion-icon></a>
-            </td>
-        </tr>
-        <!-- / Linha para repetir -->
+        <div style="margin-right: 4vw; margin-left: 4vw;">
+    <table style="margin-top: 4vw;" class="table">
+        <thead>
+            <tr class="bg-primary text-light">
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Email</th>
+                <th scope="col">Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usr in usuarios %}
+            <tr>
+                <td>{{ usr.id }}</td>
+                <td>{{ usr.nome }}</td>
+                <td>{{ usr.email }}</td>
+                <td><a style="font-size: 1.3em;" href="usuario_apagar.php?id={{usr.id}}"><ion-icon name="trash-outline"></ion-icon></a>
+                <a style="font-size: 1.3em;" href="usuario_ver.php?id={{usr.id}}"><ion-icon name="create-outline"></ion-icon></a>
+                </tr>
         {% else %}
         <tr>
-            <td colspan="2">Nenhum usuário</td>
+            <td colspan="2">Nenhum usuário encontrado</td>
         </tr>
         {% endfor %}
-        
-    </table>
+        </tbody>
+    </table> 
+</div>
 
      <div class="container">
         <div class="col-md-12 text-center btn btn-primary ">  

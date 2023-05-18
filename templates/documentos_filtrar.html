@@ -1,0 +1,58 @@
+{% include "inc/head.html" %}
+
+    <p style="text-align: center; font-size: 2em;">Listagem de usuários</p>
+     
+    <div style="margin-right: 4vw; margin-left: 4vw;">
+    <form method="POST" action="documentos_filtrar.php" class="form-inline">   
+    
+    <label for="data">Filtrar por data:</label>
+    <br>
+    <input class="col-sm-2 col-form-label border" type="date" id="data" name="data">
+    
+    <label class="my-1 mr-2" for="tipo">Filtrar por tipo:</label>
+    <select class="custom-select my-1 mr-sm-2" name="tipo" id="tipo">  
+        <option value="">Todos</option>
+        <option value="application/pdf">PDF</option>
+        <option value="application/msword">DOC</option>
+        <option value="application/vnd.openxmlformats-officedocument.wordprocessingml.document">DOCX</option>
+    </select>
+    <button class="btn btn-primary">Enviar</button>
+        </form>
+        
+    <br>
+    <table style="margin-top: 2vw;" class="table">
+        <thead>
+            <tr class="bg-primary text-light" >
+                <th scope="col">ID</th>
+                <th scope="col">Nome do documento</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Data de envio</th>
+                <th scope="col">Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for arq in arquivos %}
+            <tr>
+                <td>{{ arq.id }}</td>
+                <td>{{ arq.arquivo }}</td>
+                <td>{{ arq.tipo }}</td>
+                <td>{{ arq.upload }}</td>
+                <td><a style="font-size: 1.3em;" href="documentos_apagar.php?id={{arq.id}}"><ion-icon name="trash-outline"></ion-icon></a>
+                </tr>
+        {% else %}
+        <tr>
+            <td colspan="2">Nenhum arquivo encontrado</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table> 
+    </div>
+
+
+     <div class="container">
+        <div class="col-md-12 text-center btn btn-primary ">  
+            <a class="text-white" href="documentos.php">Adicionar novo documento</a>
+        </div>
+    </div>
+
+{% include "inc/foot.html" %}

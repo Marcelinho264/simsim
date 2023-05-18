@@ -13,7 +13,8 @@ section {
     min-height: 100vh;
     width: 100%;
 
-    background: linear-gradient(gray, #63d49d);
+    background: linear-gradient(dodgerblue, white
+    );
 }
 
 .form-box {
@@ -21,18 +22,17 @@ section {
     width: 800px;
     height: 550px;
     background: azure;
-    border: 2px solid #17f58d;
+    border: 2px solid dodgerblue;
     border-radius: 20px;
     backdrop-filter: blur(15px);
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
 
 }
 
 .form-value{
-    margin-right: 100px;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
 }
 
@@ -48,7 +48,7 @@ img{
 
 h2 {
     font-size: 2em;
-    color: #17f58d;
+    color: dodgerblue;
     text-align: center;
 }
 
@@ -56,7 +56,7 @@ h2 {
     position: relative;
     margin: 30px 0;
     width: 310px;
-    border-bottom: 2px solid #17f58d;
+    border-bottom: 2px solid dodgerblue;
 }
 
 .inputbox label {
@@ -64,7 +64,7 @@ h2 {
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
-    color: rgb(45, 226, 157);
+    color: lightskyblue;
     font-size: 1em;
     pointer-events: none;
     transition: .5s;
@@ -75,7 +75,7 @@ h2 {
 .form-box .inputbox input:valid~label {
     font-size: 12px;
     top: -5px;
-    color: #17f58d;
+    color: dodgerblue;
 }
 
 
@@ -87,13 +87,13 @@ h2 {
     outline: none;
     font-size: 1em;
     padding: 0 35px 0 5px;
-    color: rgb(72, 197, 149);
+    color: dodgerblue;
 }
 
 .inputbox ion-icon {
     position: absolute;
     right: 8px;
-    color: #17f58d;
+    color: dodgerblue;
     font-size: 1.2em;
     top: 20px;
 }
@@ -101,7 +101,7 @@ h2 {
 .forget {
     margin: -15px 0 15px;
     font-size: .9em;
-    color: #17f58d;
+    color: dodgerblue;
     display: flex;
     justify-content: space-between;
 }
@@ -112,7 +112,7 @@ h2 {
 }
 
 .forget>a {
-    color: #17f58d;
+    color: dodgerblue;
     text-decoration: none;
 }
 
@@ -125,7 +125,7 @@ button {
     width: 100%;
     height: 40px;
     border-radius: 40px;
-    background: #17f58d;
+    background: dodgerblue;
     border: none;
     outline: none;
     cursor: pointer;
@@ -133,5 +133,5 @@ button {
     font-weight: 900;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: rgb(40, 97, 3);
+    color: white;
 }
